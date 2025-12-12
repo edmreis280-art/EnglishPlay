@@ -2,77 +2,37 @@
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
-  <title>Learn English</title>
+  <title>EnglishPlay | Login</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body class="center">
 
-<header>
-  <h1>📘 Learn English</h1>
-  <p>Aprenda inglês do zero</p>
-</header>
+<div class="box fade">
+  <h1>🎮 EnglishPlay</h1>
+  <p>Aprenda inglês jogando</p>
 
-<nav>
-  <button onclick="showSection('flashcards')">Flashcards</button>
-  <button onclick="showSection('grammar')">Gramática</button>
-  <button onclick="showSection('quiz')">Quiz</button>
-  <button onclick="showSection('reading')">Leitura</button>
-  <button onclick="showSection('pronunciation')">Pronúncia</button>
-</nav>
+  <input
+    type="text"
+    id="loginUser"
+    placeholder="Usuário"
+    autocomplete="username"
+  >
 
-<main>
+  <input
+    type="password"
+    id="loginPass"
+    placeholder="Senha"
+    autocomplete="current-password"
+  >
 
-  <!-- FLASHCARDS -->
-  <section id="flashcards" class="section active">
-    <h2>🧠 Flashcards</h2>
-    <div class="card" onclick="flipCard()">
-      <p id="card-text">Hello</p>
-    </div>
-    <button onclick="nextCard()">Próximo</button>
-  </section>
+  <button onclick="login()">Entrar</button>
 
-  <!-- GRAMÁTICA -->
-  <section id="grammar" class="section">
-    <h2>📖 Gramática</h2>
-    <p>She ___ a student.</p>
-    <button onclick="checkGrammar('is')">is</button>
-    <button onclick="checkGrammar('are')">are</button>
-    <p id="grammar-result"></p>
-  </section>
+  <p style="margin-top: 15px;">
+    Não tem conta?
+    <a href="register.html">Cadastre-se</a>
+  </p>
+</div>
 
-  <!-- QUIZ -->
-  <section id="quiz" class="section">
-    <h2>🎮 Quiz</h2>
-    <p>What is the meaning of "Dog"?</p>
-    <button onclick="checkQuiz('errado')">Gato</button>
-    <button onclick="checkQuiz('certo')">Cachorro</button>
-    <p id="quiz-result"></p>
-  </section>
-
-  <!-- LEITURA -->
-  <section id="reading" class="section">
-    <h2>📚 Leitura</h2>
-    <p><strong>Text:</strong> I like apples and bananas.</p>
-    <p>What does the person like?</p>
-    <button onclick="checkReading('certo')">Apples and bananas</button>
-    <button onclick="checkReading('errado')">Only apples</button>
-    <p id="reading-result"></p>
-  </section>
-
-  <!-- PRONÚNCIA -->
-  <section id="pronunciation" class="section">
-    <h2>🔊 Pronúncia</h2>
-    <p>Word: <strong>Hello</strong></p>
-    <button onclick="playAudio()">Ouvir Pronúncia</button>
-  </section>
-
-</main>
-
-<footer>
-  <p>Pontuação: <span id="score">0</span></p>
-</footer>
-
-<script src="data.js"></script>
 <script src="script.js"></script>
 </body>
 </html>
