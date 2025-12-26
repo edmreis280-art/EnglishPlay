@@ -1,28 +1,26 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>EnglishPlay | Cadastro</title>
+  <title>EnglishPlay - Cadastro</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body class="center">
 
-<div class="card-box">
-  <h1>Crie sua conta 🎉</h1>
-  <p>Comece a aprender inglês agora</p>
+  <div class="card">
+    <h1>Criar Conta</h1>
 
-  <input id="regUser" placeholder="Nome de usuário">
-  <input id="regPass" type="password" placeholder="Senha">
+    <input id="regUser" placeholder="Usuário">
+    <input id="regPass" type="password" placeholder="Senha">
+    <input id="regPass2" type="password" placeholder="Confirmar senha">
 
-  <button class="primary" onclick="register()">Cadastrar</button>
+    <button onclick="register()">Cadastrar</button>
 
-  <p class="link">
-    Já tem conta?
-    <a href="index.html">Entrar</a>
-  </p>
-
-  <p id="regMsg" class="msg"></p>
-</div>
+    <p>
+      Já tem conta?
+      <a href="login.html">Entrar</a>
+    </p>
+  </div>
 
 <script src="script.js"></script>
 </body>
