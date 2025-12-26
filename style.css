@@ -1,13 +1,11 @@
 * {
   box-sizing: border-box;
-  transition: 0.3s;
+  font-family: 'Poppins', sans-serif;
 }
 
 body {
   margin: 0;
-  font-family: "Arial Rounded MT Bold", Arial, sans-serif;
-  background: #121212;
-  color: #fff;
+  background: #f6f7fb;
 }
 
 .center {
@@ -17,99 +15,98 @@ body {
   height: 100vh;
 }
 
-.card-box {
-  background: #1e1e1e;
-  border-radius: 30px;
+.card {
+  background: white;
   padding: 30px;
-  width: 320px;
+  border-radius: 20px;
+  width: 300px;
   text-align: center;
-  border: 3px solid #58cc02;
-}
-
-h1 {
-  color: #58cc02;
+  animation: fade 0.5s;
 }
 
 input {
   width: 100%;
-  padding: 14px;
-  margin: 10px 0;
-  border-radius: 20px;
-  border: none;
-  font-size: 16px;
+  padding: 12px;
+  margin: 8px 0;
+  border-radius: 10px;
+  border: 1px solid #ccc;
 }
 
-.primary {
+button {
   width: 100%;
-  padding: 14px;
-  border-radius: 25px;
-  border: none;
+  padding: 12px;
   background: #58cc02;
-  color: black;
+  color: white;
+  border: none;
+  border-radius: 12px;
   font-size: 16px;
-  font-weight: bold;
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
-.primary:hover {
-  background: #6ee60c;
+button:hover {
+  transform: scale(1.05);
 }
 
-.link {
-  margin-top: 15px;
+a {
+  color: #58cc02;
 }
-
-.link a {
-  color: #f7d046;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.msg {
-  margin-top: 10px;
-  font-size: 14px;
-  color: #f7d046;
-}
-
-/* ===== APP ===== */
 
 header {
-  text-align: center;
+  background: #58cc02;
+  color: white;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress {
+  background: #ddd;
+  height: 12px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+#progressBar {
+  height: 100%;
+  width: 0%;
+  background: #ffc800;
+  border-radius: 10px;
+  transition: width 0.5s;
+}
+
+.lessons {
+  display: flex;
+  gap: 15px;
   padding: 15px;
 }
 
-nav {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 10px;
-}
-
-nav button {
-  padding: 12px 18px;
-  border-radius: 25px;
-  border: none;
+.lesson {
+  width: 100px;
+  height: 100px;
   background: #58cc02;
-  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
   font-weight: bold;
 }
 
-.section {
-  display: none;
-  padding: 20px;
+.locked {
+  background: gray;
 }
 
-.section.active {
-  display: block;
+.lessonCard {
+  margin: 20px;
 }
 
-.card {
-  background: #1e1e1e;
-  border: 3px solid #f7d046;
-  border-radius: 30px;
-  padding: 40px;
-  text-align: center;
-  font-size: 26px;
-  cursor: pointer;
-  color: #f7d046;
+#feedback {
+  font-weight: bold;
+}
+
+@keyframes fade {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; }
 }
