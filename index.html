@@ -1,36 +1,36 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
   <meta charset="UTF-8">
-  <title>EnglishPlay | Login</title>
+  <title>EnglishPlay</title>
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="center">
+<body>
 
-<div class="box fade">
-  <h1>🎮 EnglishPlay</h1>
-  <p>Aprenda inglês jogando</p>
+<header>
+  <span id="userName"></span>
+  <span>XP: <b id="xp">0</b></span>
+</header>
 
-  <input
-    type="text"
-    id="loginUser"
-    placeholder="Usuário"
-    autocomplete="username"
-  >
+<div class="progress">
+  <div id="progressBar"></div>
+</div>
 
-  <input
-    type="password"
-    id="loginPass"
-    placeholder="Senha"
-    autocomplete="current-password"
-  >
+<h2>Lições</h2>
 
-  <button onclick="login()">Entrar</button>
+<div class="lessons">
+  <div class="lesson" onclick="nextCard()">📘 Vocabulário</div>
+  <div class="lesson locked">🔒 Exercícios</div>
+</div>
 
-  <p style="margin-top: 15px;">
-    Não tem conta?
-    <a href="register.html">Cadastre-se</a>
-  </p>
+<div class="card lessonCard">
+  <h2 id="word">Hello</h2>
+  <p id="translation">Olá</p>
+
+  <button onclick="speak()">Ouvir</button>
+  <button onclick="correct()">Próximo</button>
+
+  <p id="feedback"></p>
 </div>
 
 <script src="script.js"></script>
